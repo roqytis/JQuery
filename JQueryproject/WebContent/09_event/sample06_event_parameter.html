@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready (function () {
+	$("#a").on("click",{foo:"test",test:"abc"}, function(event) {
+		console.log(event.data.foo);
+		console.log(event.data.test);
+	
+	})
+	
+});
+
+</script>
+</head>
+<body>
+<button id="a">ok</button>
+
+ <div></div>
+
+
+</body>
+</html>

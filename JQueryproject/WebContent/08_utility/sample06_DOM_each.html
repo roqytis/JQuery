@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	console.log("li의 첫번째요소"+ $("li").get(0).innerHTML);
+	console.log($("li").get(0));//fn?tag?
+	var result=0;
+	//console.log("li의 첫번째요소"+ $("li").get(-1).text());//error
+/* 		$.each($("li"), function(i, elt) {
+		result= result+ parseInt(elt.innerText);
+	}); */
+	$("li").each( function(i, elt) {
+		result= result+ parseInt(elt.innerText);
+	});
+	console.log(result);
+	$("#result").text(result);
+})
+
+</script>
+</head>
+<body>
+<ul>
+   <li>100</li>
+   <li>200</li>
+   <li>300</li>
+   <li>400</li>
+  </ul>
+	<span id="result"></span>
+
+</body>
+</html>

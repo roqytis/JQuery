@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("#a").on("click",getData);
+})
+ 
+ function getData() {
+	$.ajax({
+		type:"get",
+	    url:"sample01_text.jsp",
+	    dataType:"text",
+	    success:function(data,status,xhr){
+	    	console.log("success", data);
+	    	$("#result").text(data);
+	    	console.log(status, xhr);
+	    },
+	    error:function(xhr,status, e) {
+			console.log("error",e);
+			//console.log("status",status)
+		}//error
+	}	);//ajax end
+}
+</script>
+</head>
+<body>
+<button id="a">ajax요청</button>
+ <div id="result"></div>
+
+</body>
+</html>

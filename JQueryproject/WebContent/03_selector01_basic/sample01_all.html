@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>특정태그 : p</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("p").css("color","red");
+	var data= document.getElementsByTagName("p");//javascript 코드도 혼용된다.
+	console.log(data)
+});
+
+</script>
+</head>
+<body>
+<p>Hello</p>
+<p>Hello2</p>
+<div>World</div>
+<div>world2</div>
+
+</body>
+</html>

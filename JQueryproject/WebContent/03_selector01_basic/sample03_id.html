@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>특정태그 : p</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var jdata=$("#a");
+	console.log(jdata);//S.fn.init[p#a]
+	var data=document.getElementById("a");
+	console.log(data);
+	//html태그: value, innerText,innerHTML, src, action은 fn객체에서 사용안됨
+	//jQuery객체: .val(), text(), .html(), attr("src","속성값"), attr("action","속성값")
+	// 로 접근해야함
+	
+	 $("#a2").css("color","red"); 
+	      console.log($("#a2").innerText);// undefined fn 객체는 text()함수 사용
+	  console.log("text() :", $("#a2").text());
+	      $("#a").text("=======");
+	      $("#a").innerText="aaaaa";
+});
+
+</script>
+</head>
+<body>
+<p id="a">Hello</p>
+<p id="a2">Hello2</p>
+<div id="b">World</div>
+<span id="c">test</span>
+
+</body>
+</html>

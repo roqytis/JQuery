@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+//html테그를 사용 모두 가져옴
+//html태그 사용 setter기록 
+	$(function () {
+		//prop 검증 true, false 리턴 
+		$("button").on("click", function () {
+			console.log($("#my").attr("checked"));//checked출력
+			console.log($("#my").prop("checked"));//속성명이 있는지 검사 true출력			
+		});
+	});
+
+
+</script>
+</head>
+<body>
+A<input id="my" type="checkbox" name="my" checked="checked"><br>
+    B<input type="checkbox" name="my2" ><br>
+	<button>
+
+</html>

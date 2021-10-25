@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+	/*   $("button").on("click", function () {// .click(동작함수), .on("이벤트명", 동작함수 )
+			var userid= $("#userid").val();   //fn은 value가 아닌 val()함수 사용 
+			var passwd= $("#passwd").val(); //getter
+			console.log(userid, passwd);
+			$("#passwd2").val(passwd);//setter
+			console.log($("#selTest").val());//select val 사용
+	});
+ */	  $("button").click( function () {// .click(동작함수), .on("이벤트명", 동작함수 )
+			var userid= $("#userid").val();   //fn은 value가 아닌 val()함수 사용 
+			var passwd= $("#passwd").val(); //getter
+			console.log(userid, passwd);
+			$("#passwd2").val(passwd);//setter
+			console.log($("#selTest").val());//select val 사용
+	});
+
+	///////////////////////////////////////////////
+	 /*  $("#selTest").on("change", function () {
+			
+			console.log($("#selTest").val());//select val 사용
+	}); */
+	  $("#selTest").change( function () {
+			
+			console.log($("#selTest").val());//select val 사용
+	});
+
+});
+</script>
+</head>
+<body>
+<select id="selTest">
+		<option value="aaaa">aaa</option>
+		<option value="bbb">bbbb</option>
+	</select>
+	아이디:
+	<input type="text" name="userid" id="userid" value="아이디입력">
+	<br> 비번:
+	<input type="text" name="passwd" id="passwd" value="비번입력">
+	<input type="text" name="passwd" id="passwd2">
+	<br>
+	<button>OK</button>
+</body>
+
+</html>

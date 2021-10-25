@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function () {
+		/*  $("#a").on("click", function () { //주의 click임 //submit인경우  action부분 동작
+		event.preventDefault(); //click인경우에 preventDefault동작
+		//submit과 같이 사용하면 안됨 
+		 	//$("#myForm1").attr("action", "target_1.html"); //click인 경우 동작
+		console.log("submit 실행됨");
+	});  */
+	
+		
+	$("#myForm1").on("submit", function(){
+		console.log("submit========");
+		event.preventDefault();
+	});    
+	
+	
+	
+	 $("#b").on("click",  function () { //주의 click임 
+		//event.preventDefault();
+		$("#myForm2").attr("action", "target.html");
+		console.log("submit 실행됨");
+		return false; 
+	});
+	
+});
+
+</script>
+</head>
+<body>
+<form id="myForm1" action="target.html">
+	<input type="text" name="id">
+ 	<button id="a">a</button> <br>
+ 	<input type="submit" value="전송">
+ </form>
+ <hr>
+<form id="myForm2" action="#">
+<input type="text" name="id">
+ 	<button id="b">b</button> 
+ </form>
+
+</body>
+</html>

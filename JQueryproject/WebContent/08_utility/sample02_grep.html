@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    	//$.grep(arr, idx)
+		//grep 필터링 처리 후 다시 배열로 반환 (object, idx )순서로 순서가 다름
+      var s=["A","B","C","D"];
+    	var arr= $.grep(s,function( data, idx) {
+		    console.log(data);
+    		return data=="B";
+		}, true);
+        console.log(arr);
+    });
+</script>
+</head>
+<body>
+
+</body>
+</html>
